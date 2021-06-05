@@ -1,11 +1,11 @@
 class SchemeEntity {
-  String scheme;
-  String host;
-  int port;
-  String path;
-  Map<String, String> query;
-  String source;
-  String dataString;
+  String? scheme;
+  String? host;
+  int? port;
+  String? path;
+  Map<String, String>? query;
+  String? source;
+  String? dataString;
   SchemeEntity({
     this.scheme,
     this.host,
