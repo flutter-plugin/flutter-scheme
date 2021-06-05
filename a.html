@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>测试App Scheme</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+    
+</body>
+</html>
+
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <div>
+            <a href="app://hong.com/product?productId=10000007&">Android、iOS</a>
+        </div>
+
+        <div>
+            <a href="app://">app:// 无host</a>
+        </div>
+
+        <div>
+            <a href="app://hong.com">app:// 无path</a>
+        </div>
+
+        <div>
+            <a href="app://hong.com/product">app:// 无query</a>
+        </div>
+
+        <div>
+            <a href="intent://hong.com/product?productId=10000007#Intent;scheme=app;end">Android特殊机型</a>
+        </div>
+        
+        <div style="text-align:center;">
+            <h4>小熊有好货测试</h4>
+            <div>
+                <a href="xiaoxiongapp://xapi.xiaomanxiong.com/home?redirect_type=1&ios_redirect_url=www.baidu.com&android_redirect_url=www.baidu.com">测试类型1</a>
+            </div>
+            <div>
+                <a href="intent://xapi.xiaomanxiong.com/home?redirect_type=1&ios_redirect_url=www.baidu.com&android_redirect_url=www.baidu.com#Intent;scheme=xiaoxiongapp;end">(Android特殊机型)测试类型1</a>
+            </div>
+        </div>
+    </body>
+</html>
