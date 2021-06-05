@@ -1,30 +1,32 @@
+import 'package:flutter/material.dart';
+
 class SchemeEntity {
-  String? scheme;
-  String? host;
-  int? port;
-  String? path;
-  Map<String, String>? query;
-  String? source;
-  String? dataString;
+  final String? scheme;
+  final String? host;
+  final int? port;
+  final String? path;
+  final Map<String, String>? query;
+  final String? source;
+  final String? dataString;
   SchemeEntity({
-    this.scheme,
+    required this.scheme,
     this.host,
     this.port,
     this.path,
     this.query,
     this.source,
-    this.dataString,
+    required this.dataString,
   });
 
   Map<String, dynamic> toJson() {
     return {
-      'scheme': scheme,
-      'host': host,
-      'port': port,
-      'path': path,
-      'query': query,
-      'source': source,
-      'dataString': dataString
+      'scheme': this.scheme,
+      'host': this.host,
+      'port': this.port,
+      'path': this.path,
+      'query': this.query,
+      'source': this.source,
+      'dataString': this.dataString
     };
   }
 }
