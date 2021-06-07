@@ -1,11 +1,15 @@
+## 1.0.3
+
+* TODO: Optimize some functions
+
 ## 1.0.2
 
-* TODO: 增加Null safety
+* TODO: Increase Null safety
 
 ## 1.0.1
 
-* TODO: 新增使用说明,以及example中Android和iOS测试地址
+* TODO: Added instructions for use, and test addresses for Android and iOS in the example
 
 ## 1.0.0
 
-* TODO: 提交Flutter Android、iOS自定义Scheme URL方案.
+* TODO: Submit Flutter Android and iOS custom Scheme URL schemes.

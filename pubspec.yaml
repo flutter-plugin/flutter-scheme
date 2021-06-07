@@ -1,6 +1,6 @@
 name: appscheme
-description:  Android、iOS自定义Scheme URL方案
-version: 1.0.2
+description:  Flutter plugin for accepting incoming links - App/Deep Scheme Links (Android), Universal Links and Custom URL schemes (iOS).
+version: 1.0.3
 #author: ScottWang
 homepage: http://scott-cry.win/
 

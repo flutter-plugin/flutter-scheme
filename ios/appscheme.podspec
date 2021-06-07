@@ -4,10 +4,10 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'appscheme'
-  s.version          = '1.0.1'
-  s.summary          = 'iOS自定义Scheme URL方案'
+  s.version          = '1.0.3'
+  s.summary          = 'iOS Universal Links and Custom URL schemes'
   s.description      = <<-DESC
-  iOS端自定义Scheme URL方案.
+  iOS Universal Links and Custom URL schemes.
                        DESC
   s.homepage         = 'http://scott-cry.win/'
   s.license          = { :file => '../LICENSE' }

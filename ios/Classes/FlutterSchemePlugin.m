@@ -42,7 +42,6 @@ static id _instance;
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-    NSLog(@"==========>   handleMethodCall  method:%@",call.method);
   if([@"getInitScheme" isEqualToString:call.method]){
       result(_initialScheme);
   }else if([@"getLatestScheme" isEqualToString:call.method]){
@@ -53,8 +52,11 @@ static id _instance;
 }
 
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
-    NSLog(@"==========>   continueUserActivity  ");
-    return  YES;
+    if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+        [self foundSchemeURL:[userActivity webpageURL]];
+        return YES;
+    }
+    return  NO;
 }
 
 - (void)foundSchemeURL:(NSURL * _Nullable)url {
