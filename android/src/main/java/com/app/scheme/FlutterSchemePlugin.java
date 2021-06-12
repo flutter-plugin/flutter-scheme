@@ -104,22 +104,30 @@ public class FlutterSchemePlugin implements FlutterPlugin, MethodChannel.MethodC
     String action = intent.getAction();
     if (Intent.ACTION_VIEW.equals(action)) {
       Uri schemeUri = intent.getData();
-      Map<String,Object> dataMap = new HashMap<>();
-      dataMap.put("scheme",schemeUri.getScheme());
-      dataMap.put("host",schemeUri.getHost());
-      dataMap.put("port",schemeUri.getPort());
-      dataMap.put("path",schemeUri.getPath());
-      dataMap.put("query",schemeUri.getQuery());
-      dataMap.put("source","android");
-      dataMap.put("dataString",intent.getDataString());
-      if(initialIntent){
-        initialScheme = dataMap;
-        initialIntent = false;
+      if(schemeUri == null){
+        return;
       }
-      latestScheme = dataMap;
-      if(eventSink != null){
-        eventSink.success(dataMap);
+      try {
+        Map<String,Object> dataMap = new HashMap<>();
+        dataMap.put("scheme",schemeUri.getScheme());
+        dataMap.put("host",schemeUri.getHost());
+        dataMap.put("port",schemeUri.getPort());
+        dataMap.put("path",schemeUri.getPath());
+        dataMap.put("query",schemeUri.getQuery());
+        dataMap.put("source","android");
+        dataMap.put("dataString",intent.getDataString());
+        if(initialIntent){
+          initialScheme = dataMap;
+          initialIntent = false;
+        }
+        latestScheme = dataMap;
+        if(eventSink != null){
+          eventSink.success(dataMap);
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
       }
+
     }
   }
 }
