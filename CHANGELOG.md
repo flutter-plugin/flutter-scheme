@@ -1,3 +1,7 @@
+## 1.0.4
+
+* TODO: Optimize some functions
+
 ## 1.0.3
 
 * TODO: Optimize some functions
