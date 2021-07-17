@@ -1,21 +1,34 @@
 PODS:
-  - appscheme (1.0.3):
+  - appscheme (1.0.4):
     - Flutter
   - Flutter (1.0.0)
+  - fluwx (0.0.1):
+    - Flutter
+    - WechatOpenSDK (= 1.8.7.1)
+  - WechatOpenSDK (1.8.7.1)
 
 DEPENDENCIES:
   - appscheme (from `.symlinks/plugins/appscheme/ios`)
   - Flutter (from `Flutter`)
+  - fluwx (from `.symlinks/plugins/fluwx/ios`)
+
+SPEC REPOS:
+  trunk:
+    - WechatOpenSDK
 
 EXTERNAL SOURCES:
   appscheme:
     :path: ".symlinks/plugins/appscheme/ios"
   Flutter:
     :path: Flutter
+  fluwx:
+    :path: ".symlinks/plugins/fluwx/ios"
 
 SPEC CHECKSUMS:
-  appscheme: 0e1929608e38f9a75a379001c581356e176abfb1
+  appscheme: b1c3f8862331cb20430cf9e0e4af85dbc1572ad8
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  fluwx: 07a55ed66bf3a4961e836a2a411b02dcada32902
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 

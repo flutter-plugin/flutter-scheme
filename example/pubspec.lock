@@ -7,14 +7,14 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.4"
+    version: "1.0.5"
   async:
     dependency: transitive
     description:
       name: async
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.5.0"
+    version: "2.6.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -67,6 +67,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fluwx:
+    dependency: "direct main"
+    description:
+      name: fluwx
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.5.0"
   matcher:
     dependency: transitive
     description:
@@ -99,7 +106,7 @@ packages:
       name: source_span
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.8.0"
+    version: "1.8.1"
   stack_trace:
     dependency: transitive
     description:
@@ -134,7 +141,7 @@ packages:
       name: test_api
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.2.19"
+    version: "0.3.0"
   typed_data:
     dependency: transitive
     description:

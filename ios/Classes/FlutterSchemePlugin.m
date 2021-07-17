@@ -108,13 +108,13 @@ static id _instance;
 #pragma mark - handleOpenURL
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     [self foundSchemeURL:url];
-    return YES;
+    return NO;
 }
 
 #pragma mark - openURL
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
     [self foundSchemeURL:url];
-    return YES;
+    return NO;
 }
 
 - (FlutterError *)onListenWithArguments:(id)arguments eventSink:(FlutterEventSink)events{
