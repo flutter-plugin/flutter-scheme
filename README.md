@@ -1,20 +1,22 @@
 # Flutter App Scheme
 
-## 配置说明
+[中文说明](https://github.com/flutter-plugin/flutter-scheme/blob/master/README-ZH.md)
 
-### 1、Android端配置说明
-在您项目中 Android的`AndroidManifest.xml`文件中按照如下规范添加`Scheme`,例如`android/app/src/main/AndroidManifest.xml`
+## Configuration instructions
 
-#### a、在需要启动的Activity中新增以下格式的代码
+### 1、Android configuration instructions
+Add `Scheme` in the `AndroidManifest.xml` file of Android in your project according to the following specifications, for example, `android/app/src/main/AndroidManifest.xml`
+
+#### a、Add the following code in `Activity`
 ```xml
 <!--Android Scheme-->
 <intent-filter>
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
-  <!--需要被网页拉起必须设置-->
+  <!--Need to be pulled up by the web page must be set-->
   <category android:name="android.intent.category.BROWSABLE" />
   <category android:name="android.intent.category.APP_BROWSER" />
-  <!--协议部分-->
+  <!--Agreement part-->
   <data
     android:host="hong.com"
     android:path="/product"
@@ -22,24 +24,24 @@
 </intent-filter>
 ```
 
-### 2、iOS端配置说明
-在你的项目中,ios工程中```Info.plist```文件中按照如下规范添加`Scheme`,例如:`ios/Runner/Info.plist`
+### 2、iOS configuration instructions
+In your project, add `Scheme` in the ```Info.plist`'' file in the ios project according to the following specifications, for example: `ios/Runner/Info.plist`
 
-#### a、在`Info.plist`文件中添加如下格式的代码
+#### a、Add the following code in the `Info.plist` file
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
     ...
-    <key>CFBundleURLTypes</key><!-- 表示添加Scheme相关信息 -->
+    <key>CFBundleURLTypes</key><!-- Add Scheme related information -->
     <array>
       <dict>
         <key>CFBundleURLName</key>
         <string>hong.com/product</string>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>app</string><!-- 此处是Scheme -->
+          <string>app</string><!-- Here's Scheme -->
         </array>
       </dict>
     </array>
@@ -49,9 +51,14 @@
 ```
 
 
-## 使用方法
+## Instructions
 
-#### 1、初始化
+```
+dependencies:
+  appscheme: ^1.0.5
+```
+
+#### 1、initialize
 ```
 AppScheme appScheme = AppSchemeImpl.getInstance();
 ```
